@@ -3,26 +3,25 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
 
+    initial = True
+
     dependencies = [
-        ('team', '0002_auto_20160222_2320'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Responsable',
+            name='School',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('team', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='team.Team')),
+                ('name', models.CharField(max_length=50)),
             ],
             options={
-                'verbose_name': 'Responsable',
-                'verbose_name_plural': 'Responsables',
+                'verbose_name': 'School',
+                'verbose_name_plural': 'Schools',
             },
         ),
     ]
